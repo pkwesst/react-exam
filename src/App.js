@@ -1,16 +1,27 @@
 import React from "react";
-//import "./App.css";
 import Counter from "./Counter";
 import MyHeader from "./MyHeader";
+import Container from "./Container";
+//import "./App.css";
 
 function App() {
   const number = 5;
 
+  const counterProps = {
+    a: 1,
+    b: 2,
+    c: 3,
+    d: 4,
+    e: 5,
+  };
+
   return (
-    <div>
-      <MyHeader />
-      <Counter />
-    </div>
+    <Container>
+      <div>
+        <MyHeader />
+        <Counter {...counterProps} />
+      </div>
+    </Container>
   );
 }
 
